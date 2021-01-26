@@ -1,0 +1,11 @@
+17:55:43 **** Incremental Build of configuration Debug for project final_project ****
+make -j8 all 
+arm-none-eabi-gcc -o "final_project.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\sem5\Mircro Processor\Lab\final proj\Final Proj. Group\ide\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="final_project.map" -Wl,--gc-sections -static -L"C:\Users\Zishi Liu\STM32Cube\Repository\Packs\ARM\CMSIS\5.7.0\CMSIS\DSP\Lib\GCC" -Larm_cortexM7lfsp_math.a --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Core/Src/pid.o: In function `PID_Init':
+D:/sem5/Mircro Processor/Lab/final proj/Final Proj. Group/ide/Debug/../Core/Src/pid.c:19: undefined reference to `arm_pid_init_f32'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:58: final_project.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+17:55:44 Build Failed. 2 errors, 0 warnings. (took 583ms)
+

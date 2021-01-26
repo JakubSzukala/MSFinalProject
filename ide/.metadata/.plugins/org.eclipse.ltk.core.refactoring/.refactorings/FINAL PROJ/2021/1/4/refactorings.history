@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FINAL PROJ/Core/Src/f32&apos; to &apos;f32.c&apos;" description="Rename resource &apos;f32&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/f32" name="f32.c" stamp="1611173847325" updateReferences="true"/>
+</session>

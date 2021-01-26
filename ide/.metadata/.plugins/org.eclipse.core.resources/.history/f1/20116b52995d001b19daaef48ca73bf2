@@ -1,0 +1,32 @@
+/**
+  ******************************************************************************
+  * File Name          : controller.c
+  * Description        : This file provides code for PID controller.
+  ******************************************************************************
+  */
+#include "arm_math.h"
+#include "pid.h"
+
+void PID_Init()// Initialize PID
+
+{
+	// Set parameters for PID
+	PID.Kp = PID_PARAM_KP; //constant gain
+	PID.Ki = PID_PARAM_KI; //integrator
+	PID.Kd = PID_PARAM_KD; //derivative
+	arm_pid_init_f32 (&PID, 1);
+
+}
+
+/**
+  * @brief Calculate duty
+  * @param [measurement] Value measured from sensor
+  * @param [reference] Value desired by user
+  * @retval [Duty]
+  */
+float PID_GetDuty(float meas_val, float ref_val)
+{
+	float pid_error = ref_val - meas_val;		//getting error
+	float duty = arm_pid_f32(&PID, pid_error);	//getting PID duty(error)
+	return duty;
+}

@@ -1,0 +1,2 @@
+measurement.c:15:6:BH1750_Init	24	static
+measurement.c:32:7:BH1750_Read	32	static
